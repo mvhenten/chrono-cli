@@ -6,6 +6,7 @@
   "bin": {
     "chrono": "./cli.js"
   },
+  "public": true,
   "author": "Matthijs van Henten",
   "license": "MIT",
   "repository": "https://github.com/mvhenten/chrono-cli",
