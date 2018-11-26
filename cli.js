@@ -22,20 +22,18 @@ require('yargs')
             console.error(`Could not parse: ${argv.date}`);
             process.exit(1);
         }
-        
-        date.setUTCHours(7);
-        
-        if (!argv.format) {
-            console.log(date.toISOString());
-            return;
-        }
-        
+
         let formatter = strftime;
-        
+
         if (argv.timezone)
             formatter = strftime.timezone(argv.timezone);
 
-        console.log(formatter(argv.format, date));
+        let format = argv.format;
+
+        if (!argv.format)
+            format = "%FT%TZ";
+
+        console.log(formatter(format, date));
     })
     .example(`$0 "10 days ago" -f "%A"`, "Displays day of the week from 10 days ago")
     .argv;
