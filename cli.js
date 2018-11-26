@@ -19,7 +19,7 @@ require("yargs")
     })
     .alias("format", "f")
     .command(
-        ["parse <date...>", "$0 <date...>"],
+        ["$0 <date...>"],
         "Parse a natural language date string",
         () => {},
         argv => {

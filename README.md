@@ -9,7 +9,7 @@ Wrapper to make a cli out of [chrono-node](https://www.npmjs.com/package/chrono-
 ## Usage
 
 ```bash
-    $ chrono parse <date...>
+    $ chrono <date...>
     
     Parse a natural language date string
     
