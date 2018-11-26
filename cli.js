@@ -10,7 +10,7 @@ require('yargs')
     .option("format")
     .alias("format", "f")
     .describe("format", "strftime format string (see 'man strftime')")
-    .command(['parse <date...>', '$0 <date...>'], 'the serve command', () => {}, (argv) => {
+    .command(['parse <date...>', '$0 <date...>'], "Parse a natural language date string", () => {}, (argv) => {
         let datestr = argv.date;
 
         if (Array.isArray(argv.date))
